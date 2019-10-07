@@ -31,3 +31,20 @@
 
   @include nb-overrides();
 };
+
+.nb-theme-cosmic nb-layout .layout {
+  background-color: #323259 !important;
+}
+
+.nb-theme-cosmic nb-layout .layout .layout-container nb-sidebar.fixed, .nb-theme-cosmic nb-layout .layout .layout-container nb-sidebar .main-container-fixed {
+  top: 0 !important;
+}
+
+.nb-theme-cosmic nb-sidebar {
+  // box-shadow: none;
+}
+
+nb-layout-column {
+  border-radius: 12px 0px 0px 0px !important;
+  background-color: white !important;
+}

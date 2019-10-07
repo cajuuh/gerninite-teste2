@@ -59,7 +59,7 @@ export class CanvasChartComponent implements OnInit {
     if (point.label) {
       ctx.beginPath();
       var yOffset = (y >= 50) ? y - 12 : y + 13;
-      ctx.fillStyle = "#A16EFF";
+      ctx.fillStyle = "#FFFFFF";
       ctx.font = "14px Georgia";
       ctx.fillText(point.label, x - 8, yOffset);
       ctx.closePath();
@@ -115,9 +115,11 @@ export class CanvasChartComponent implements OnInit {
 
     pts.push({ x: pts[0].x, y: pts[0].y }, { x: pts[1].x, y: pts[1].y });
     pts.unshift(pts[n - 1]);
+
     for (var i = 0; i < n; i += 1) {
       cp = cp.concat(this.getControlPoints(pts[i].x, pts[i].y, pts[i + 1].x, pts[i + 1].y, pts[i + 2].x, pts[i + 2].y, t));
     }
+
     cp = cp.concat({ p1x: cp[0].p1x, p1y: cp[0].p1y });
 
     for (var i = 2; i < n + 2; i += 1) {
@@ -129,7 +131,7 @@ export class CanvasChartComponent implements OnInit {
 
     ctx.closePath();
     ctx.lineWidth = 3;
-    ctx.fillStyle = '#FFFFFF';
+    ctx.fillStyle = '#a16eff';
     ctx.fill();
     ctx.strokeStyle = '#b4b4db';
     ctx.stroke();
