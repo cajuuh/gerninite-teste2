@@ -1,0 +1,36 @@
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #fff;
+  height: 70px;
+  width: 960px;
+}
+.col{
+  position: relative;
+  background-color: transparent;
+  width: 29px;
+  border-left: #CCC 1px solid;
+}
+.coldrop{
+  background-color: #ecf6fc;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  bottom:0;
+  display: none;
+}
+.col:hover .coldrop{
+  display: block;
+}
+/* .col:hover{
+  position: relative;
+  background-color: #64bdf0;
+  width: 29px;
+  border-left: #CCC 1px solid;
+} */
+.col:last-child {
+  border-right: #CCC 1px solid;
+  width: 28px;
+}

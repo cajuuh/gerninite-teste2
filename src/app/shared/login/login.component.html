@@ -1,0 +1,158 @@
+<h1 id="title" class="title">Login</h1>
+<p class="sub-title">Olá! Utilize seu nome de usuário.</p>
+
+<!-- <nb-alert *ngIf="showMessages.error && errors?.length && !submitted" outline="danger" role="alert">
+  <p class="alert-title"><b>Oh snap!</b></p>
+  <ul class="alert-message-list">
+    <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
+  </ul>
+</nb-alert>
+
+<nb-alert *ngIf="showMessages.success && messages?.length && !submitted" outline="success" role="alert">
+  <p class="alert-title"><b>Hooray!</b></p>
+  <ul class="alert-message-list">
+    <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
+  </ul>
+</nb-alert> -->
+
+<form (ngSubmit)="login()" [formGroup]="dataSource" aria-labelledby="title">
+  <div class="form-control-group">
+    <label class="label" for="input-email">Nome:</label>
+    <input
+      nbInput
+      fullWidth
+      name="nome"
+      formControlName="nome"
+      id="input-nome"
+      placeholder="Nome"
+      fieldSize="large"
+      autofocus
+      [status]="
+        dataSource.controls.nome.dirty
+          ? dataSource.controls.nome.invalid
+            ? 'danger'
+            : 'success'
+          : ''
+      "
+      [required]="
+        dataSource.controls.nome.invalid &&
+        (dataSource.controls.nome.dirty || dataSource.controls.nome.touched)
+      "
+      [attr.aria-invalid]="
+        dataSource.controls.nome.invalid && dataSource.controls.nome.touched
+          ? true
+          : null
+      "
+    />
+    <ng-container
+      *ngIf="
+        dataSource.controls.nome.invalid && dataSource.controls.nome.touched
+      "
+    >
+      <p
+        class="caption status-danger"
+        *ngIf="dataSource.controls.nome.errors?.required"
+      >
+        Nome é obrigatório!
+      </p>
+    </ng-container>
+  </div>
+
+  <div class="form-control-group">
+    <span class="label-with-link">
+      <label class="label" for="input-senha">Senha:</label>
+      <a class="forgot-password caption-2" href="#">Esqueceu a senha?</a>
+    </span>
+    <input
+      nbInput
+      fullWidth
+      name="senha"
+      formControlName="senha"
+      id="input-senha"
+      placeholder="Senha:"
+      fieldSize="large"
+      autofocus
+      [status]="
+        dataSource.controls.senha.dirty
+          ? dataSource.controls.senha.invalid
+            ? 'danger'
+            : 'success'
+          : ''
+      "
+      [required]="
+        dataSource.controls.senha.invalid &&
+        (dataSource.controls.senha.dirty ||
+          dataSource.controls.senha.touched)
+      "
+      [attr.aria-invalid]="
+        dataSource.controls.senha.invalid &&
+        dataSource.controls.senha.touched
+          ? true
+          : null
+      "
+    />
+    <ng-container
+      *ngIf="
+        dataSource.controls.senha.invalid &&
+        dataSource.controls.senha.touched
+      "
+    >
+      <p
+        class="caption status-danger"
+        *ngIf="dataSource.controls.senha.errors?.required"
+      >
+        Senha é obrigatória!
+      </p>
+      <!-- TODO: checar com bboy as validações da senha -->
+      <!-- <p class="caption status-danger" *ngIf="dataSource.controls.password.errors?.minlength || dataSource.controls.password.errors?.maxlength">
+        Password should contain
+        from {{ getConfigValue('forms.validation.password.minLength') }}
+        to {{ getConfigValue('forms.validation.password.maxLength') }}
+        characters
+      </p> -->
+    </ng-container>
+  </div>
+
+  <!-- <div class="form-control-group accept-group">
+    <nb-checkbox name="rememberMe" [(ngModel)]="user.rememberMe" *ngIf="rememberMe">Remember me</nb-checkbox>
+  </div> -->
+
+  <button
+    nbButton
+    fullWidth
+    status="primary"
+    size="large"
+    [disabled]="!dataSource.controls.nome.valid && !dataSource.controls.senha.valid"
+    (click)="login()"
+  >
+    Log In
+  </button>
+</form>
+
+<!-- <section *ngIf="socialLinks && socialLinks.length > 0" class="links" aria-label="Social sign in">
+  or enter with:
+  <div class="socials">
+    <ng-container *ngFor="let socialLink of socialLinks">
+      <a *ngIf="socialLink.link"
+         [routerLink]="socialLink.link"
+         [attr.target]="socialLink.target"
+         [attr.class]="socialLink.icon"
+         [class.with-icon]="socialLink.icon">
+        <nb-icon *ngIf="socialLink.icon; else title" [icon]="socialLink.icon"></nb-icon>
+        <ng-template #title>{{ socialLink.title }}</ng-template>
+      </a>
+      <a *ngIf="socialLink.url"
+         [attr.href]="socialLink.url"
+         [attr.target]="socialLink.target"
+         [attr.class]="socialLink.icon"
+         [class.with-icon]="socialLink.icon">
+        <nb-icon *ngIf="socialLink.icon; else title" [icon]="socialLink.icon"></nb-icon>
+        <ng-template #title>{{ socialLink.title }}</ng-template>
+      </a>
+    </ng-container>
+  </div>
+</section>
+
+<section class="another-action" aria-label="Register">
+  Don't have an account? <a class="text-link" routerLink="../register">Register</a>
+</section> -->
