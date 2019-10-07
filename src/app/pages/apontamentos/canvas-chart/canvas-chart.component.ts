@@ -59,7 +59,7 @@ export class CanvasChartComponent implements OnInit {
     if (point.label) {
       ctx.beginPath();
       var yOffset = (y >= 50) ? y - 12 : y + 13;
-      ctx.fillStyle = "#090909";
+      ctx.fillStyle = "#A16EFF";
       ctx.font = "14px Georgia";
       ctx.fillText(point.label, x - 8, yOffset);
       ctx.closePath();
@@ -129,9 +129,9 @@ export class CanvasChartComponent implements OnInit {
 
     ctx.closePath();
     ctx.lineWidth = 3;
-    ctx.fillStyle = '#8ED6FF';
+    ctx.fillStyle = '#FFFFFF';
     ctx.fill();
-    ctx.strokeStyle = '#64bdf0';
+    ctx.strokeStyle = '#b4b4db';
     ctx.stroke();
 
     ctx.restore();
@@ -243,10 +243,10 @@ export class CanvasChartComponent implements OnInit {
     clearTimeout(this.timeOutAnimatePontoSelecionado);
     for (var i = 0; i <= qtdFrames; i += 1) {
 
-      (function () {
+      (() => {
         var percCarregamento = i / qtdFrames;
         var tempoDeEspera = (qtdFrames * percCarregamento + 1) * 40;
-        this.timeOutAnimatePontoSelecionado = setTimeout(function () {
+        this.timeOutAnimatePontoSelecionado = setTimeout(() => {
           var diametroProporcional = percCarregamento * diametroSelecionado;
           this.main(t2, 1, { indexSelecionado, diametroSelecionado: diametroProporcional });
         }, tempoDeEspera);

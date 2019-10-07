@@ -6,7 +6,6 @@ import { AngularSplitModule } from 'angular-split';
   declarations: [],
   imports: [
     CommonModule,
-    AngularSplitModule.forRoot()
   ]
 })
 export class ApontamentosModule { }

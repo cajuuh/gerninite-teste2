@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ApontamentosModule } from './apontamentos/apontamentos.module';
 import { CanvasChartComponent } from './apontamentos/canvas-chart/canvas-chart.component';
+import { AngularSplitModule } from 'angular-split';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CanvasChartComponent } from './apontamentos/canvas-chart/canvas-chart.c
     NbMenuModule,
     MiscellaneousModule,
     ApontamentosModule,
+    AngularSplitModule.forRoot()
   ],
   declarations: [
     PagesComponent,
