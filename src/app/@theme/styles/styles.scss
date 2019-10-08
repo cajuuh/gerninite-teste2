@@ -32,19 +32,61 @@
   @include nb-overrides();
 };
 
-.nb-theme-cosmic nb-layout .layout {
+.nb-theme-default nb-layout .layout {
   background-color: #323259 !important;
 }
 
-.nb-theme-cosmic nb-layout .layout .layout-container nb-sidebar.fixed, .nb-theme-cosmic nb-layout .layout .layout-container nb-sidebar .main-container-fixed {
+.layout-container nb-sidebar.left {
+  background-color: #323259;
+}
+
+.nb-theme-default nb-layout .layout .layout-container nb-sidebar.fixed, .nb-theme-default nb-layout .layout .layout-container nb-sidebar .main-container-fixed {
   top: 0 !important;
 }
 
-.nb-theme-cosmic nb-sidebar {
-  // box-shadow: none;
+// .nb-theme-default nb-sidebar {
+//   box-shadow: none;
+// }
+
+.nb-theme-default nb-sidebar.compacted {
+  width: 4.9rem;
+}
+
+.nb-theme-default nb-sidebar.compacted nb-menu {
+  width: 4.9rem;
+}
+
+[dir=ltr] .nb-theme-default nb-action {
+  padding-bottom: 15px;
+  border-left: none;
+}
+
+.user-container {
+  right: 10% !important;
+}
+
+.nb-theme-default nb-user .user-picture {
+  border: none;
+}
+
+.nb-theme-default nb-menu .menu-item {
+  border: none;
+}
+
+.user-picture {
+  left: -3px;
+}
+
+
+.nb-theme-default p {
+  color: #333;
 }
 
 nb-layout-column {
-  border-radius: 12px 0px 0px 0px !important;
+  border-radius: 12px 0 0 !important;
   background-color: white !important;
+}
+
+.nb-theme-default nb-sidebar.compacted .main-container {
+  width: 7.5rem;
 }

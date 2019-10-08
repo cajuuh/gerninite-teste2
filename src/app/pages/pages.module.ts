@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbMenuModule } from '@nebular/theme';
+import { NbMenuModule, NbCardModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -19,7 +19,8 @@ import { AngularSplitModule } from 'angular-split';
     NbMenuModule,
     MiscellaneousModule,
     ApontamentosModule,
-    AngularSplitModule.forRoot()
+    AngularSplitModule.forRoot(),
+    NbCardModule
   ],
   declarations: [
     PagesComponent,

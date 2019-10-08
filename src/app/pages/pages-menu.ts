@@ -11,7 +11,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Apontamentos',
     icon: 'calendar-outline',
     link: './apontamentos',
-    home: false
+    home: false,
   },
   {
     title: 'Projetos',

@@ -58,8 +58,14 @@ export class CanvasChartComponent implements OnInit {
 
     if (point.label) {
       ctx.beginPath();
-      var yOffset = (y >= 50) ? y - 12 : y + 13;
-      ctx.fillStyle = "#FFFFFF";
+      var yOffset = 0;
+      if (y >= 50) {
+        yOffset =  y - 12
+        ctx.fillStyle = "#0083d9";
+      } else {
+        yOffset =  y + 13
+        ctx.fillStyle = "#FFFFFF";
+      }
       ctx.font = "14px Georgia";
       ctx.fillText(point.label, x - 8, yOffset);
       ctx.closePath();
@@ -131,9 +137,9 @@ export class CanvasChartComponent implements OnInit {
 
     ctx.closePath();
     ctx.lineWidth = 3;
-    ctx.fillStyle = '#a16eff';
+    ctx.fillStyle = '#009aff';
     ctx.fill();
-    ctx.strokeStyle = '#b4b4db';
+    ctx.strokeStyle = '#0083d9';
     ctx.stroke();
 
     ctx.restore();
