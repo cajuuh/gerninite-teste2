@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as $ from 'jquery';
+import { ApontamentosService } from '../services/apontamentos.service';
 
 @Component({
   selector: "ngx-canvas-chart",
@@ -12,8 +13,11 @@ export class CanvasChartComponent implements OnInit {
   timeOutAnimatePontoSelecionado;
   tAtual = 0;
   pts = [];
-  constructor() {
-
+  apontamentos: any;
+  constructor(private apontamentosService: ApontamentosService) {
+    this.apontamentosService.getApontamentos(1).subscribe(response => {
+      console.log(response);
+    });
   }
 
   ngOnInit() {

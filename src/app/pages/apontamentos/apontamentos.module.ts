@@ -7,7 +7,6 @@ import { NbCardModule } from '@nebular/theme';
   declarations: [],
   imports: [
     CommonModule,
-
   ]
 })
 export class ApontamentosModule { }
