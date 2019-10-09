@@ -90,3 +90,27 @@ nb-layout-column {
 .nb-theme-default nb-sidebar.compacted .main-container {
   width: 7.5rem;
 }
+
+//a16eff
+.nb-theme-default nb-checkbox.status-primary .custom-checkbox {
+  background-color: #f7f9fc;
+  border-color: #a16eff;
+}
+
+.nb-theme-default nb-checkbox.status-primary .custom-checkbox:hover {
+  background-color: #b18aff;
+  border-color: #b18aff;
+}
+
+.nb-theme-default nb-checkbox.status-primary .custom-checkbox.checked {
+  background-color: #a16eff;
+  border-color: #a16eff;
+}
+
+.nb-theme-default nb-layout .layout {
+  color: #a16eff;
+}
+
+.nb-theme-default nb-checkbox.status-primary .native-input:focus + .custom-checkbox {
+  border-color: #a16eff;
+}

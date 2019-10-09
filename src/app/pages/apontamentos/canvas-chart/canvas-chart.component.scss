@@ -1,3 +1,8 @@
+.nb-theme-cosmic nb-checkbox.status-primary .custom-checkbox {
+  background-color: #f7f9fc;
+  border-color: #a16eff;
+}
+
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -5,6 +10,7 @@
   flex-wrap: wrap;
   // background-color: rgb(78, 39, 39);
 }
+
 .row-pai {
   display: -ms-flexbox;
   display: flex;
@@ -69,6 +75,7 @@
   height: 70px;
   width: 200px;
 }
+
 .row-detalhe {
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +86,28 @@
   width: 960px;
   padding-bottom: 2px;
 }
+
+.row-detalhe-novo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  //background-color: #fff;
+  height: 70px;
+  width: 960px;
+  padding-bottom: 2px;
+}
+
 .col-dia {
+  position: relative;
+  background-color: transparent;
+  width: 30px;
+  border-left: rgba(204, 204, 204, 0.36) 1px solid;
+}
+
+.col-dia-novo {
+  padding-top: 2%;
+  padding-left: 0.5%;
   position: relative;
   background-color: transparent;
   width: 30px;
@@ -94,9 +122,11 @@
   bottom:0;
   display: none;
 }
+
 .col-dia:hover .coldrop {
   display: block;
 }
+
 /* .col:hover{
   position: relative;
   background-color: #64bdf0;

@@ -30,6 +30,10 @@ export class CanvasChartComponent implements OnInit {
     this.animate(0.5, null);
   }
 
+  // nao alocado - componente gráfico
+  // falta abonada
+  // ferias
+
 
   hexToCanvasColor(hexColor, opacity) {
     // Convert #AA77CC to rbga() format for Firefox
