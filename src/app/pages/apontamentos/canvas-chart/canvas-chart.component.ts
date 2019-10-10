@@ -10,7 +10,7 @@ import { ApontamentosService } from '../services/apontamentos.service';
 export class CanvasChartComponent implements OnInit {
   folders = [{ name: "nadsa", updated: "nadsa" }, { name: "nadsa", updated: "nadsa" }, { name: "nadsa", updated: "nadsa" }];
 
-  timeOutAnimatePontoSelecionado;
+  timeOutAnimatePontoSelecionado: any;
   tAtual = 0;
   pts = [];
   apontamentos: any;
@@ -23,7 +23,9 @@ export class CanvasChartComponent implements OnInit {
   ngOnInit() {
     $(".col").css("background-color", "#000");
     var heightColProjeto = $(".col-projeto").css("height");
-    $(".row-pai").css("height", heightColProjeto);
+    var heighColOutros = $(".col-outros").css("height");
+    var heightTotal = heighColOutros + heightColProjeto;
+    $(".row-pai").css("height", heightTotal);
 
     // console.log(c);
     // $(".row-detalhe").css("background", 'url(' + c.toDataURL() + ')');
@@ -68,10 +70,10 @@ export class CanvasChartComponent implements OnInit {
       ctx.beginPath();
       var yOffset = 0;
       if (y >= 50) {
-        yOffset =  y - 12
+        yOffset = y - 12
         ctx.fillStyle = "#0083d9";
       } else {
-        yOffset =  y + 13
+        yOffset = y + 13
         ctx.fillStyle = "#FFFFFF";
       }
       ctx.font = "14px Georgia";

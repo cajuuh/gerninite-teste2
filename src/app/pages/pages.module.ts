@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { ApontamentosModule } from './apontamentos/apontamentos.module';
 import { CanvasChartComponent } from './apontamentos/canvas-chart/canvas-chart.component';
 import { AngularSplitModule } from 'angular-split';
+import { ChartsModule } from 'ng2-charts';
+import { PedroCanvasComponent } from './apontamentos/pedro-canvas/pedro-canvas.component';
 
 @NgModule({
   imports: [
@@ -21,14 +23,16 @@ import { AngularSplitModule } from 'angular-split';
     ApontamentosModule,
     AngularSplitModule.forRoot(),
     NbCardModule,
-    NbCheckboxModule
+    NbCheckboxModule,
+    ChartsModule
   ],
   declarations: [
     PagesComponent,
     ApontamentosComponent,
     DashboardComponent,
     HomeComponent,
-    CanvasChartComponent
+    CanvasChartComponent,
+    PedroCanvasComponent
   ],
 })
 export class PagesModule {

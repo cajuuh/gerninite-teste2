@@ -16,7 +16,7 @@ export class ApontamentosService {
 
     var reqHeader = new HttpHeaders({
       'Content-Type': 'application/json',
-      'authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+      'authorization': JSON.parse(localStorage.getItem('token'))
     });
 
     return this.httpCliente.get<any[]>(`${this.apiRef}/pessoa/${id}`, { headers: reqHeader });
