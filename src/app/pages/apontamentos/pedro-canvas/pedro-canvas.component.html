@@ -1,17 +1,96 @@
-<div styl;e>
-  <canvas
-    baseChart
-    width="150"
-    height="150"
-    [datasets]="lineChartData"
-    [labels]="lineChartLabels"
-    [options]="lineChartOptions"
-    [colors]="lineChartColors"
-    [legend]="lineChartLegend"
-    [chartType]="lineChartType"
-    [plugins]="lineChartPlugins"
-    (chartHover)="chartHovered($event)"
-    (chartClick)="chartClicked($event)"
-  ></canvas>
+<div class="row-pai ex-b">
+  <as-split
+    direction="horizontal"
+    unit="pixel"
+    useTransition="action.useTransition"
+  >
+    <as-split-area size="220">
+      <div class="col-projeto">
+        <div class="row-projeto">
+          <div class="projeto-detalhe">
+            <span class="projeto-detalhe-nome">
+              Gernini
+            </span>
+            <span class="projeto-detalhe-previsao">
+              30/09 a 30/10
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-outros">
+        <div class="row-projeto">
+          <div class="adicionais-detalhe">
+            <span class="projeto-detalhe-nome">
+              Não alocado
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-outros">
+        <div class="row-projeto">
+          <div class="adicionais-detalhe">
+            <span class="projeto-detalhe-nome">
+              Falta abonada
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-outros">
+        <div class="row-projeto">
+          <div class="adicionais-detalhe">
+            <span class="projeto-detalhe-nome">
+              Ferias
+            </span>
+          </div>
+        </div>
+      </div>
+    </as-split-area>
+    <as-split-area size="*">
+      <div class="col-detalhe">
+        <div class="row-detalhe">
+          <!-- TODO: o canvas vai aqui -->
+          <canvas
+            baseChart
+            height="60"
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            (chartClick)="chartClicked($event)"
+            style="padding-left: -50px;"
+          ></canvas>
+        </div>
+      </div>
+      <div class="row-detalhe">
+        <div class="col-dia-novo">
+          <!-- FIXME: consertar chamada de checkboxes -->
+          <nb-checkbox
+            status="primary"
+            (checkedChange)="toggle($event)"
+          ></nb-checkbox>
+        </div>
+      </div>
+    </as-split-area>
+  </as-split>
 </div>
-
+<hr />
+<!-- <div class="flex">
+  <div class="flex-item">
+    <canvas
+      baseChart
+      width="50"
+      height="50"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"
+    ></canvas>
+  </div>
+</div> -->

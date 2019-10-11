@@ -1,0 +1,201 @@
+.nb-theme-cosmic nb-checkbox.status-primary .custom-checkbox {
+  background-color: #f7f9fc;
+  border-color: #a16eff;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  // background-color: rgb(78, 39, 39);
+}
+
+.row-pai {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  //  background-color: rgb(78, 39, 39);
+}
+
+.projeto-detalhe-nome {
+  padding-left: 10%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #101426;
+}
+
+.projeto-detalhe-previsao {
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  color: #8f9bb3;
+  font-size: 11px;
+}
+
+.col-projeto {
+  position: relative;
+  //background-color: rgb(51, 55, 104);
+  width: 200px;
+  //border-left: rgb(15, 1, 1) 1px solid;
+}
+
+.col-detalhe {
+  position: relative;
+  background-color: transparent;
+}
+
+.projeto-detalhe {
+  width: 50%;
+  padding-top: 5%;
+  border-left: solid 10px #0083d9;
+  margin-bottom: 2px;
+}
+
+.adicionais-detalhe {
+  width: 80%;
+  padding-top: 10%;
+  border-left: solid 10px #a25ddc;
+  margin-bottom: 2px;
+}
+
+.row-projeto {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: transparent;
+  height: 70px;
+  width: 200px;
+}
+
+.row-detalhe {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  //background-color: #fff;
+  height: 70px;
+  width: 960px;
+  padding-bottom: 2px;
+}
+
+.row-detalhe-novo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  //background-color: #fff;
+  height: 70px;
+  width: 960px;
+  padding-bottom: 2px;
+}
+
+.col-dia {
+  position: relative;
+  background-color: transparent;
+  width: 30px;
+  border-left: rgba(204, 204, 204, 0.36) 1px solid;
+}
+
+.col-dia-novo {
+  padding-top: 2%;
+  padding-left: 0.5%;
+  position: relative;
+  background-color: transparent;
+  width: 30px;
+  border-left: rgba(204, 204, 204, 0.36) 1px solid;
+}
+
+.coldrop {
+  background-color: #ecf6fc;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  bottom: 0;
+  display: none;
+}
+
+.col-dia:hover .coldrop {
+  display: block;
+}
+
+/* .col:hover{
+  position: relative;
+  background-color: #64bdf0;
+  width: 29px;
+  border-left: #CCC 1px solid;
+} */
+
+.col-dia:last-child {
+  border-right: #cccccc63 1px solid;
+  width: 30px;
+}
+
+:host {
+  .ex-b as-split {
+    .as-split-area {
+      // background-color: lightgrey;
+
+      & > p {
+        padding: 2px;
+      }
+    }
+
+    ::ng-deep .as-split-gutter {
+      flex-basis: 2px !important;
+      border-width: 1px;
+      border-style: solid;
+      border-color: gray;
+      border-radius: 15px;
+      // background-color: lightgrey !important;
+      position: relative;
+    }
+
+    ::ng-deep .as-split-gutter-icon {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQuMDAwMDAwMDAwMDAwMDA0IiBoZWlnaHQ9IjI0LjAwMDAwMDAwMDAwMDAwNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxnPgogIDx0aXRsZT5iYWNrZ3JvdW5kPC90aXRsZT4KICA8cmVjdCB4PSItMSIgeT0iLTEiIHdpZHRoPSIzLjUzNzg2NSIgaGVpZ2h0PSIzLjUzNzg2NSIgaWQ9ImNhbnZhc19iYWNrZ3JvdW5kIiBmaWxsPSJub25lIi8+CiA8L2c+CgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGQ9Im0xMiwxOGMxLjY1NywwIDMsMS4zNDMgMywzcy0xLjM0MywzIC0zLDNzLTMsLTEuMzQzIC0zLC0zczEuMzQzLC0zIDMsLTN6bTAsLTljMS42NTcsMCAzLDEuMzQzIDMsM3MtMS4zNDMsMyAtMywzcy0zLC0xLjM0MyAtMywtM3MxLjM0MywtMyAzLC0zem0wLC05YzEuNjU3LDAgMywxLjM0MyAzLDNzLTEuMzQzLDMgLTMsM3MtMywtMS4zNDMgLTMsLTNzMS4zNDMsLTMgMywtM3oiIGlkPSJzdmdfMSIgZmlsbD0iI0JCQkJCQiIvPgogPC9nPgo8L3N2Zz4=') !important;
+      background-size: 12px !important;
+      color: gray;
+      transition: opacity 0.4s;
+      position: relative;
+      margin-left: 0.5px;
+      height: 142px;;
+    }
+
+    ::ng-deep .as-split-gutter.as-dragged .as-split-gutter-icon,
+    ::ng-deep .as-split-gutter-icon:hover {
+      opacity: 0.1;
+    }
+
+    &.as-horizontal {
+      ::ng-deep .as-split-gutter-icon {
+        width: 5px !important;
+        // left: -4px;
+        // right: 4px;
+      }
+    }
+    &.as-vertical {
+      ::ng-deep .as-split-gutter-icon {
+        height: 2px !important;
+        top: -4px;
+        bottom: 4px;
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .as-split-gutter {
+    flex-basis: 4px !important;
+  }
+}
