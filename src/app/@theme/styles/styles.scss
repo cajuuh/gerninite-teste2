@@ -22,17 +22,17 @@
 @include nb-install() {
 
   // framework global styles
-  @include nb-theme-global();
+  // @include nb-theme-global();
   @include nb-auth-global();
 
-  @include ngx-layout();
+  // @include ngx-layout();
   // loading progress bar
   @include ngx-pace-theme();
 
   @include nb-overrides();
 };
 
-.nb-theme-default nb-layout .layout {
+.nb-theme-cosmic nb-layout .layout {
   background-color: #323259 !important;
 }
 
@@ -40,23 +40,23 @@
   background-color: #323259;
 }
 
-.nb-theme-default nb-layout .layout .layout-container nb-sidebar.fixed, .nb-theme-default nb-layout .layout .layout-container nb-sidebar .main-container-fixed {
+.nb-theme-cosmic nb-layout .layout .layout-container nb-sidebar.fixed, .nb-theme-cosmic nb-layout .layout .layout-container nb-sidebar .main-container-fixed {
   top: 0 !important;
 }
 
-// .nb-theme-default nb-sidebar {
+// .nb-theme-cosmic nb-sidebar {
 //   box-shadow: none;
 // }
 
-.nb-theme-default nb-sidebar.compacted {
+.nb-theme-cosmic nb-sidebar.compacted {
   width: 4.9rem;
 }
 
-.nb-theme-default nb-sidebar.compacted nb-menu {
+.nb-theme-cosmic nb-sidebar.compacted nb-menu {
   width: 4.9rem;
 }
 
-[dir=ltr] .nb-theme-default nb-action {
+[dir=ltr] .nb-theme-cosmic nb-action {
   padding-bottom: 15px;
   border-left: none;
 }
@@ -65,11 +65,11 @@
   right: 10% !important;
 }
 
-.nb-theme-default nb-user .user-picture {
+.nb-theme-cosmic nb-user .user-picture {
   border: none;
 }
 
-.nb-theme-default nb-menu .menu-item {
+.nb-theme-cosmic nb-menu .menu-item {
   border: none;
 }
 
@@ -78,39 +78,39 @@
 }
 
 
-.nb-theme-default p {
+.nb-theme-cosmic p {
   color: #333;
 }
 
-nb-layout-column {
-  border-radius: 12px 0 0 !important;
-  background-color: white !important;
-}
+// .layout-container {
+//   border-radius: 12px 0 0 !important;
+//   background-color: white;
+// }
 
-.nb-theme-default nb-sidebar.compacted .main-container {
+.nb-theme-cosmic nb-sidebar.compacted .main-container {
   width: 7.5rem;
 }
 
 //a16eff
-.nb-theme-default nb-checkbox.status-primary .custom-checkbox {
+.nb-theme-cosmic nb-checkbox.status-primary .custom-checkbox {
   background-color: #f7f9fc;
   border-color: #a16eff;
 }
 
-.nb-theme-default nb-checkbox.status-primary .custom-checkbox:hover {
+.nb-theme-cosmic nb-checkbox.status-primary .custom-checkbox:hover {
   background-color: #b18aff;
   border-color: #b18aff;
 }
 
-.nb-theme-default nb-checkbox.status-primary .custom-checkbox.checked {
+.nb-theme-cosmic nb-checkbox.status-primary .custom-checkbox.checked {
   background-color: #a16eff;
   border-color: #a16eff;
 }
 
-.nb-theme-default nb-layout .layout {
+.nb-theme-cosmic nb-layout .layout {
   color: #a16eff;
 }
 
-.nb-theme-default nb-checkbox.status-primary .native-input:focus + .custom-checkbox {
+.nb-theme-cosmic nb-checkbox.status-primary .native-input:focus + .custom-checkbox {
   border-color: #a16eff;
 }
